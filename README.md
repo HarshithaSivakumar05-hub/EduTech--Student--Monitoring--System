@@ -4,7 +4,7 @@ A unified web platform that connects **students, teachers and parents** on one d
 
 Built with **React (Vite)** on the frontend and **Node.js / Express** on **Zoho Catalyst AppSail** for the backend.
 
-![CI](https://github.com/<your-username>/EduTech-Student-Monitoring-System/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/HarshithaSivakumar05-hub/EduTech-Student-Monitoring-System/actions/workflows/ci.yml/badge.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Made with React](https://img.shields.io/badge/frontend-React%20%2B%20Vite-3b4fe0)
 ![Backend](https://img.shields.io/badge/backend-Zoho%20Catalyst%20AppSail-f2a93b)
