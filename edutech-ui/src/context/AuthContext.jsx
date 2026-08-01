@@ -1,7 +1,6 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
-const AuthContext = createContext(null);
-
+export const AuthContext = createContext(null);
 const STORAGE_KEY = "edutech.session";
 
 export function AuthProvider({ children }) {
@@ -33,10 +32,4 @@ export function AuthProvider({ children }) {
       {children}
     </AuthContext.Provider>
   );
-}
-
-export function useAuth() {
-  const ctx = useContext(AuthContext);
-  if (!ctx) throw new Error("useAuth must be used within AuthProvider");
-  return ctx;
 }
