@@ -2,8 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthShell from "../components/AuthShell";
 import { roles } from "../data/mockData";
-import { useAuth } from "../context/AuthContext";
-
+import { useAuth } from "../context/useAuth";
 const roleConfig = roles.parent;
 
 function ParentLogin() {
