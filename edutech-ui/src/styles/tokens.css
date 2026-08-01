@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+
+:root {
+  /* ---- Palette ---- */
+  --ink-900: #0c1224;
+  --ink-800: #10182e;
+  --ink-700: #161f3d;
+  --ink-600: #232e52;
+
+  --paper-0: #f7f8fc;
+  --paper-50: #ffffff;
+  --paper-100: #eef0f8;
+
+  --indigo-500: #3b4fe0;
+  --indigo-600: #2f3fc4;
+  --indigo-050: #eaecfd;
+
+  --amber-500: #f2a93b;
+  --amber-050: #fdf1de;
+
+  --teal-500: #1fa89a;
+  --teal-050: #e2f6f3;
+
+  --coral-500: #e5566b;
+  --coral-050: #fceaec;
+
+  --green-500: #1fab6b;
+  --red-500: #e5484d;
+
+  --text-900: #0d1224;
+  --text-600: #4a5170;
+  --text-400: #8b91ab;
+  --line-100: #e3e6f2;
+
+  /* ---- Type ---- */
+  --font-display: "Sora", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+
+  /* ---- Shape / motion ---- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --shadow-card: 0 1px 2px rgba(13, 18, 36, 0.04), 0 12px 32px -16px rgba(13, 18, 36, 0.18);
+  --shadow-pop: 0 24px 60px -20px rgba(13, 18, 36, 0.35);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  background: var(--paper-0);
+  color: var(--text-900);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--text-900);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+  color: var(--text-600);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--indigo-500);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--indigo-050);
+  color: var(--indigo-600);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

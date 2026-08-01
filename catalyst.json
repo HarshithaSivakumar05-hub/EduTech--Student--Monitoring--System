@@ -1,0 +1,14 @@
+{
+  "appsail": [
+    {
+      "source": "appsail",
+      "name": "AppSail"
+    }
+  ],
+  "slate": [
+    {
+      "name": "edutech-ui",
+      "source": "C:\\Users\\harsh\\OneDrive\\Attachments\\EduTech\\edutech-ui"
+    }
+  ]
+}

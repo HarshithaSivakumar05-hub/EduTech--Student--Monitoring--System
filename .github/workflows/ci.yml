@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-frontend:
+    name: Lint & build frontend
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: edutech-ui/package-lock.json
+
+      - name: Install dependencies
+        working-directory: edutech-ui
+        run: npm ci
+
+      - name: Lint
+        working-directory: edutech-ui
+        run: npm run lint
+
+      - name: Build
+        working-directory: edutech-ui
+        run: npm run build
+
+  backend-check:
+    name: Verify backend
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: appsail/package-lock.json
+
+      - name: Install dependencies
+        working-directory: appsail
+        run: npm ci
+
+      - name: Syntax check
+        working-directory: appsail
+        run: node --check index.js
