@@ -11,7 +11,7 @@ import "./styles/dashboard.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/EduTech--Student--Monitoring--System/">
       <AuthProvider>
         <App />
       </AuthProvider>
